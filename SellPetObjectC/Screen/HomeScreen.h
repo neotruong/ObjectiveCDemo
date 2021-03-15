@@ -14,7 +14,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 @property (weak, nonatomic) IBOutlet UIView *userInformationView;
 @property (weak, nonatomic) IBOutlet UIView *logoView;
-@property (strong, nonatomic) IBOutlet UIView *view;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionButton;
 @property (weak, nonatomic) IBOutlet UICollectionView *bodyCollectionView_ecom;
 @property (weak, nonatomic) IBOutlet UICollectionView *bodyCollectionView_feature;

@@ -257,11 +257,13 @@
                         <outlet property="backgroundImage" destination="uTK-ne-mn0" id="ASM-ah-3Ii"/>
                         <outlet property="bodyCollectionView_ecom" destination="l5u-Lb-uBq" id="Nph-a0-xdS"/>
                         <outlet property="bodyCollectionView_feature" destination="z4U-fH-rgk" id="5Ro-nT-IWW"/>
+                        <outlet property="bodyView" destination="Haq-S2-gTc" id="Oka-TP-0kg"/>
                         <outlet property="collectionButton" destination="b7u-4t-hFr" id="Pz7-3r-WoO"/>
                         <outlet property="headerLabel1" destination="ZZQ-0i-nDw" id="GRH-DJ-rgJ"/>
                         <outlet property="headerLabel2" destination="IWv-b2-ovX" id="Qv9-D9-y0c"/>
                         <outlet property="logoView" destination="IdY-be-u9U" id="Jti-yF-HMk"/>
                         <outlet property="mySrollView" destination="tYD-in-lLg" id="ESN-1d-5zf"/>
+                        <outlet property="userInformationView" destination="Eq7-ET-zWh" id="7wS-sn-vx0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8NF-8Q-N8n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

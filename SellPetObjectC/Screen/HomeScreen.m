@@ -12,11 +12,12 @@
 #import "CollectionViewCell.h"
 
 @interface HomeScreen (){
+
     NSArray *buttonTitle;
-    NSArray *ImageName;
-    NSArray *buttonEcomList;
-    NSArray *buttonFeatureList;
-    NSArray *Icon_ImageName;
+    NSArray *Icon_header;
+    NSArray *buttonEcomListName;
+    NSArray *buttonFeatureListName;
+    NSArray *Icon_ecom;
     NSArray *Icon_feature;
 }
 
@@ -27,13 +28,14 @@
 
 - (void)viewDidLoad {
     
-    NSLog(@"Test");
-    buttonEcomList= @[@"Tài Khoản",@"Thanh Toán Hóa Đơn",@"Nạp Tiền Điện Thoại",@"Trả nợ vay",@"Đặt vé máy bay",@"Đặt vé xem phim"];
-    buttonFeatureList= @[@"Danh Bạ Thụ Hưởng",@"Danh Bạ Hóa Đơn",@"Cài Đặt SoftOTP",@"Cài Đặt FaceID",@"Báo cáo giao dịch",@"ATM/Chi Nhánh"];
+    // Mock data setup
+    buttonEcomListName= @[@"Tài Khoản",@"Thanh Toán Hóa Đơn",@"Nạp Tiền Điện Thoại",@"Trả nợ vay",@"Đặt vé máy bay",@"Đặt vé xem phim"];
+    buttonFeatureListName= @[@"Danh Bạ Thụ Hưởng",@"Danh Bạ Hóa Đơn",@"Cài Đặt SoftOTP",@"Cài Đặt FaceID",@"Báo cáo giao dịch",@"ATM/Chi Nhánh"];
     buttonTitle = @[@"Tài Khoản",@"Chuyển Tiền",@"QR Pay",@"Nạp Tiền Điện Thoại"];
-    ImageName = @[@"button_TK",@"button_CT",@"button_QR",@"button_NTDT"];
-    Icon_ImageName = @[@"ic_1",@"ic_2",@"ic_3",@"ic_4",@"ic_5",@"ic_6"];
+    Icon_header = @[@"button_TK",@"button_CT",@"button_QR",@"button_NTDT"];
+    Icon_ecom = @[@"ic_1",@"ic_2",@"ic_3",@"ic_4",@"ic_5",@"ic_6"];
     Icon_feature = @[@"ic_7",@"ic_8",@"ic_9",@"ic_10",@"ic_11",@"ic_12"];
+    //
     
     [super viewDidLoad];
     self.view.insetsLayoutMarginsFromSafeArea = false;
@@ -53,7 +55,6 @@
     //
     
     [self setupUI];
-
 }
 
 - (void) setupUI {
@@ -102,20 +103,20 @@
     if (collectionView == _collectionButton) {
         return buttonTitle.count;
     } else {
-        return buttonEcomList.count;
+        return buttonEcomListName.count;
     }
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     CollectionViewCell *cell= (CollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-    
+    // Setting collection view
     if (collectionView == _collectionButton) {
         cell.cellComponent.buttonContent.text = buttonTitle[indexPath.row];
         [cell.cellComponent.buttonContent sizeToFit];
-        cell.cellComponent.buttonImage.image = [UIImage imageNamed:ImageName[indexPath.row]];
+        cell.cellComponent.buttonImage.image = [UIImage imageNamed:Icon_header[indexPath.row]];
     } else if(collectionView == _bodyCollectionView_ecom) {
-        cell.cellComponent.buttonContent.text = buttonEcomList[indexPath.row];
+        cell.cellComponent.buttonContent.text = buttonEcomListName[indexPath.row];
         cell.cellComponent.buttonContent.textColor = [UIColor blackColor];
         cell.cellComponent.buttonContent.font = [UIFont fontWithName:@"HelveticaNeue" size:13.0 ];
         [cell.cellComponent.buttonContent sizeToFit];
@@ -123,7 +124,7 @@
         [self.view updateConstraints];
         cell.cellComponent.buttonImage.image = [UIImage imageNamed:Icon_feature[indexPath.row]];
     } else {
-        cell.cellComponent.buttonContent.text = buttonFeatureList[indexPath.row];
+        cell.cellComponent.buttonContent.text = buttonFeatureListName[indexPath.row];
         cell.cellComponent.buttonContent.textColor = [UIColor blackColor];
         cell.cellComponent.buttonContent.font = [UIFont fontWithName:@"HelveticaNeue" size:13.0 ];
         [cell.cellComponent.buttonContent sizeToFit];
@@ -136,6 +137,7 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    // resize collection item to centre
     return CGSizeMake(54 +  self.view.frame.size.width / 12, 50 +  self.view.frame.size.height / 12);
 }
 
