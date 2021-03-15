@@ -11,6 +11,7 @@
 @interface HomeScreen : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UIScrollView *mySrollView;
 
+@property (strong, nonatomic) IBOutlet UIView *view;
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 @property (weak, nonatomic) IBOutlet UIView *userInformationView;
 @property (weak, nonatomic) IBOutlet UIView *logoView;

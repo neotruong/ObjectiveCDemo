@@ -40,20 +40,8 @@
     [super viewDidLoad];
     self.view.insetsLayoutMarginsFromSafeArea = false;
     self.navigationController.navigationBarHidden = true;
-    
-    self.collectionButton = _collectionButton;
-    self.bodyCollectionView_ecom = _bodyCollectionView_ecom;
-    self.bodyCollectionView_feature = _bodyCollectionView_feature;
-    
-    // Collection setup
-    _collectionButton.dataSource = self;
-    _collectionButton.delegate = self;
-    _bodyCollectionView_ecom.delegate = self;
-    _bodyCollectionView_ecom.dataSource = self;
-    _bodyCollectionView_feature.delegate = self;
-    _bodyCollectionView_feature.dataSource = self;
-    //
-    
+
+
     [self setupUI];
 }
 
@@ -93,6 +81,26 @@
     //
     [_mySrollView setShowsHorizontalScrollIndicator:NO];
     [_mySrollView setShowsVerticalScrollIndicator:NO];
+    
+    //
+    
+    
+    
+    [_collectionButton registerNib:[UINib nibWithNibName: @"CollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"cell"];
+    
+    _collectionButton.delegate = self;
+    _collectionButton.dataSource = self;
+    
+    [_bodyCollectionView_feature registerNib:[UINib nibWithNibName: @"CollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"cell"];
+    
+    _bodyCollectionView_feature.delegate = self;
+    _bodyCollectionView_feature.dataSource = self;
+    
+    [_bodyCollectionView_ecom registerNib:[UINib nibWithNibName: @"CollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"cell"];
+    
+    _bodyCollectionView_ecom.delegate = self;
+    _bodyCollectionView_ecom.dataSource = self;
+    
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
@@ -100,6 +108,7 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    
     if (collectionView == _collectionButton) {
         return buttonTitle.count;
     } else {
@@ -109,7 +118,9 @@
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    CollectionViewCell *cell= (CollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+   
+    CollectionViewCell *cell=[_collectionButton dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    
     // Setting collection view
     if (collectionView == _collectionButton) {
         cell.cellComponent.buttonContent.text = buttonTitle[indexPath.row];
@@ -138,8 +149,12 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     // resize collection item to centre
-    return CGSizeMake(54 +  self.view.frame.size.width / 12, 50 +  self.view.frame.size.height / 12);
+    return CGSizeMake(50 +  self.view.frame.size.width / 12, 50 +  self.view.frame.size.height / 12);
 }
 
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+  {
+      return UIEdgeInsetsMake(25, 10,10,15);
+  }
 
 @end

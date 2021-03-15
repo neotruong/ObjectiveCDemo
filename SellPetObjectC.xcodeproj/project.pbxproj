@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0292854925FF1C4C00C30AA4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0292854825FF1C4C00C30AA4 /* ViewController.m */; };
 		34029FA325FA270D00527BE6 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 34029FA125FA270D00527BE6 /* CollectionViewCell.m */; };
 		34029FA425FA270D00527BE6 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34029FA225FA270D00527BE6 /* CollectionViewCell.xib */; };
 		34040F6525F9F5FA00EDC451 /* Logo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34040F6425F9F5FA00EDC451 /* Logo.xib */; };
@@ -49,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0292854725FF1C4C00C30AA4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		0292854825FF1C4C00C30AA4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		34029FA025FA270D00527BE6 /* CollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
 		34029FA125FA270D00527BE6 /* CollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		34029FA225FA270D00527BE6 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
@@ -113,6 +116,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0292854D25FF20D600C30AA4 /* CustomCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomCollectionView;
+			sourceTree = "<group>";
+		};
 		34029F9F25FA26C200527BE6 /* CollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +188,8 @@
 			children = (
 				34801FC625F9B01B00F8C92F /* HomeScreen.h */,
 				34801FC725F9B01B00F8C92F /* HomeScreen.m */,
+				0292854725FF1C4C00C30AA4 /* ViewController.h */,
+				0292854825FF1C4C00C30AA4 /* ViewController.m */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -193,6 +205,7 @@
 		342F53AA25F9D09E00DE1FF0 /* UIComponent */ = {
 			isa = PBXGroup;
 			children = (
+				0292854D25FF20D600C30AA4 /* CustomCollectionView */,
 				3415A6AA25FB620D001DBA33 /* HeaderLabel */,
 				3415A67625FB0BC7001DBA33 /* Slider */,
 				34029F9F25FA26C200527BE6 /* CollectionViewCell */,
@@ -410,6 +423,7 @@
 				34AFC46325FA7A910071F76D /* CoopBankButton.m in Sources */,
 				3415A67E25FB0D62001DBA33 /* Slider.m in Sources */,
 				342F53CD25F9D60A00DE1FF0 /* UserInformation.m in Sources */,
+				0292854925FF1C4C00C30AA4 /* ViewController.m in Sources */,
 				3415A6B225FB6673001DBA33 /* HeaderLabel.m in Sources */,
 				34801FC225F9B01B00F8C92F /* AppDelegate.m in Sources */,
 				34801FD325F9B01C00F8C92F /* main.m in Sources */,

@@ -37,7 +37,7 @@
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="7V1-ID-hPR">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="325"/>
                                 </imageView>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kJo-b1-5oi">
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="kJo-b1-5oi">
                                     <rect key="frame" x="20" y="45" width="374" height="260"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qZl-0e-2H8">
@@ -54,8 +54,8 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="VQR-kQ-N4d" secondAttribute="trailing" id="4c2-k3-Gne"/>
-                                                <constraint firstAttribute="bottom" secondItem="VQR-kQ-N4d" secondAttribute="bottom" constant="25" id="Q14-KY-HvJ"/>
-                                                <constraint firstItem="VQR-kQ-N4d" firstAttribute="top" secondItem="qZl-0e-2H8" secondAttribute="top" id="WT3-ZK-MBp"/>
+                                                <constraint firstAttribute="bottom" secondItem="VQR-kQ-N4d" secondAttribute="bottom" constant="5" id="Q14-KY-HvJ"/>
+                                                <constraint firstItem="VQR-kQ-N4d" firstAttribute="top" secondItem="qZl-0e-2H8" secondAttribute="top" constant="20" id="WT3-ZK-MBp"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A9h-iJ-TgU" customClass="UserInformation">
@@ -65,9 +65,6 @@
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oB1-i4-Ayu">
                                             <rect key="frame" x="0.0" y="160" width="374" height="100"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="100" id="n9w-FK-VCN"/>
-                                            </constraints>
                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="5" id="Xxq-5d-MoQ">
                                                 <size key="itemSize" width="128" height="100"/>
                                                 <size key="estimatedItemSize" width="128" height="128"/>
@@ -76,14 +73,15 @@
                                                 <inset key="sectionInset" minX="5" minY="0.0" maxX="10" maxY="0.0"/>
                                             </collectionViewFlowLayout>
                                             <cells>
-                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="cell1" reuseIdentifier="cell1" id="Zm1-Ie-nWT" customClass="CollectionViewCell">
-                                                    <rect key="frame" x="5" y="-14" width="128" height="128"/>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" restorationIdentifier="cell1" reuseIdentifier="cell1" id="Zm1-Ie-nWT" customClass="CollectionViewCell">
+                                                    <rect key="frame" x="5" y="0.0" width="128" height="100"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="QNO-qQ-aMh" customClass="CoopBankButton">
-                                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="128" height="100"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </collectionViewCellContentView>
+                                                    <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                     <connections>
                                                         <outlet property="cellComponent" destination="QNO-qQ-aMh" id="7Zi-mp-iLk"/>
                                                     </connections>
@@ -99,7 +97,7 @@
                                 <constraint firstItem="7V1-ID-hPR" firstAttribute="leading" secondItem="XVv-0P-JaS" secondAttribute="leading" id="TM9-Oi-rdf"/>
                                 <constraint firstAttribute="bottom" secondItem="kJo-b1-5oi" secondAttribute="bottom" constant="20" symbolic="YES" id="VPT-cW-ALr"/>
                                 <constraint firstItem="kJo-b1-5oi" firstAttribute="leading" secondItem="XVv-0P-JaS" secondAttribute="leading" constant="20" id="dKa-jv-hfg"/>
-                                <constraint firstItem="kJo-b1-5oi" firstAttribute="top" secondItem="XVv-0P-JaS" secondAttribute="top" constant="45" id="jZ4-6h-BpH"/>
+                                <constraint firstItem="kJo-b1-5oi" firstAttribute="top" secondItem="XVv-0P-JaS" secondAttribute="top" constant="35" id="jZ4-6h-BpH"/>
                                 <constraint firstAttribute="bottom" secondItem="7V1-ID-hPR" secondAttribute="bottom" id="nzg-uf-u4K"/>
                                 <constraint firstAttribute="trailing" secondItem="7V1-ID-hPR" secondAttribute="trailing" id="vJ0-Xm-e57"/>
                                 <constraint firstAttribute="trailing" secondItem="kJo-b1-5oi" secondAttribute="trailing" constant="20" id="yQG-Eg-PV8"/>
@@ -253,6 +251,9 @@
         <image name="background" width="650" height="650"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
