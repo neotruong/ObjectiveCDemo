@@ -40,7 +40,7 @@
                             <rect key="frame" x="0.0" y="119" width="385" height="6"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="VVY-6n-yG8">
-                                    <rect key="frame" x="155" y="0.0" width="28" height="6"/>
+                                    <rect key="frame" x="177.5" y="0.0" width="28" height="6"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8MZ-wR-zVH">
                                             <rect key="frame" x="0.0" y="0.0" width="6" height="6"/>
@@ -71,7 +71,6 @@
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="VVY-6n-yG8" firstAttribute="leading" secondItem="YMz-3k-ujD" secondAttribute="leading" constant="155" id="0iY-WV-UAO"/>
                                 <constraint firstAttribute="bottom" secondItem="VVY-6n-yG8" secondAttribute="bottom" id="8Ed-Kp-4Ua"/>
                                 <constraint firstItem="VVY-6n-yG8" firstAttribute="top" secondItem="YMz-3k-ujD" secondAttribute="top" id="go0-s4-l6I"/>
                             </constraints>
@@ -82,6 +81,7 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="VVY-6n-yG8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="centerX" constant="-15" id="4wr-7X-9GQ"/>
                 <constraint firstAttribute="bottom" secondItem="RAY-zx-Oc9" secondAttribute="bottom" id="AAE-V6-DRR"/>
                 <constraint firstItem="RAY-zx-Oc9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="LMy-IX-Kj7"/>
                 <constraint firstItem="RAY-zx-Oc9" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="NnM-eC-HDG"/>
