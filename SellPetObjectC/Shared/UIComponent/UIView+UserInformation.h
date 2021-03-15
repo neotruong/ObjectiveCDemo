@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  UIView+UserInformation.h
 //  SellPetObjectC
 //
 //  Created by Neo Truong on 3/11/21.
@@ -7,8 +7,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface UIView ()
 
 @end
 
+NS_ASSUME_NONNULL_END

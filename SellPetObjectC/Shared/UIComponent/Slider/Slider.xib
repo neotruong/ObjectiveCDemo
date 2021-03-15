@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Slider">
+            <connections>
+                <outlet property="sliderButton1" destination="8MZ-wR-zVH" id="idw-kD-EMc"/>
+                <outlet property="sliderButton2" destination="Z9U-yy-vzG" id="4Q8-PI-YEV"/>
+                <outlet property="sliderButton3" destination="4Mt-1K-ZST" id="Mal-A1-Bw4"/>
+                <outlet property="sliderContent" destination="9fE-hD-y7R" id="PuX-Sa-4yH"/>
+                <outlet property="sliderImage" destination="F6D-9q-gcg" id="KRh-uc-VW7"/>
+                <outlet property="view" destination="iN0-l3-epB" id="62O-m4-EZq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="385" height="125"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mùa Giáng Sinh ấm áp cùng Co-opBank" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fE-hD-y7R">
+                    <rect key="frame" x="15" y="50" width="343" height="45.5"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="RAY-zx-Oc9">
+                    <rect key="frame" x="0.0" y="0.0" width="385" height="125"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image=" slider_1" translatesAutoresizingMaskIntoConstraints="NO" id="F6D-9q-gcg" userLabel="slider_1">
+                            <rect key="frame" x="0.0" y="0.0" width="385" height="114"/>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YMz-3k-ujD">
+                            <rect key="frame" x="0.0" y="119" width="385" height="6"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="VVY-6n-yG8">
+                                    <rect key="frame" x="155" y="0.0" width="28" height="6"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8MZ-wR-zVH">
+                                            <rect key="frame" x="0.0" y="0.0" width="6" height="6"/>
+                                            <color key="backgroundColor" systemColor="systemRedColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="6" id="fJL-GL-JuJ"/>
+                                                <constraint firstAttribute="width" constant="6" id="yqK-ld-EBu"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z9U-yy-vzG">
+                                            <rect key="frame" x="11" y="0.0" width="6" height="6"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="6" id="CO0-lt-FQ3"/>
+                                                <constraint firstAttribute="width" constant="6" id="uI4-w1-13k"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Mt-1K-ZST">
+                                            <rect key="frame" x="22" y="0.0" width="6" height="6"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="6" id="Blj-k3-lJ3"/>
+                                                <constraint firstAttribute="width" constant="6" id="bcs-rd-ARQ"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="VVY-6n-yG8" firstAttribute="leading" secondItem="YMz-3k-ujD" secondAttribute="leading" constant="155" id="0iY-WV-UAO"/>
+                                <constraint firstAttribute="bottom" secondItem="VVY-6n-yG8" secondAttribute="bottom" id="8Ed-Kp-4Ua"/>
+                                <constraint firstItem="VVY-6n-yG8" firstAttribute="top" secondItem="YMz-3k-ujD" secondAttribute="top" id="go0-s4-l6I"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="RAY-zx-Oc9" secondAttribute="bottom" id="AAE-V6-DRR"/>
+                <constraint firstItem="RAY-zx-Oc9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="LMy-IX-Kj7"/>
+                <constraint firstItem="RAY-zx-Oc9" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="NnM-eC-HDG"/>
+                <constraint firstItem="RAY-zx-Oc9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="oKD-gR-A7X"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="26.811594202898554" y="-202.56696428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name=" slider_1" width="444" height="444"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
